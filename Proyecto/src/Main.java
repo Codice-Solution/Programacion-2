@@ -16,14 +16,19 @@ class Main{
 
 
         do {
-            System.out.println("Ingrese 1 si quiere ver los datos de los Vehiculos disponibles: ");
+            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles ");
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
 
                 if (menu == 1) { // condicion if para generar el menu
                     camion_1.imprimir(); //llamando a la funcion imprimir definida en Vehiculo
+                    bus_1.imprimir();
 
+                }
+                if (menu == 2){
+                    camion_1.driver.imprimir_driver();
+                    bus_1.driver.imprimir_driver();
 
                 }
                 else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo
