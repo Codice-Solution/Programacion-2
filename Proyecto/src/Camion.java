@@ -2,8 +2,8 @@ public class Camion extends Vehiculo{
     private int capacidad_de_carga;
     private Gps gps;
 
-    public Camion(Conductor driver, String patente, int masa, int altura){
-        super(driver, patente, masa, altura);
+    public Camion(Conductor driver, String patente, String tipo,int masa, int altura){
+        super(driver, patente, tipo ,masa, altura);
 
     }
 
@@ -23,9 +23,13 @@ public class Camion extends Vehiculo{
         this.gps = gps;
     }
 
-    public void imprimir(){
-        System.out.println("Nombre del conductor: " + driver.getNombre() + ", Rut: "+ driver.getRut() + ", Edad: " + driver.getEdad() +
-                ", Patente del vehiculo: " + getPatente() + ", Masa: " + getMasa() + ", Altura: " + getAltura());
-    }
+    //public void imprimir(){
+      //  System.out.println("patente: "+ this.getPatente() + "Masa: " + this.getMasa() + "Altura: " + getAltura());
+    //}
 
+
+    @Override
+    public void imprimir() {
+        super.imprimir();
+    }
 }
