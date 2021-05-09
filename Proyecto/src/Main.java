@@ -16,7 +16,7 @@ class Main{
 
 
         do {
-            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n 2 si quiere ver los conductores disponibles ");
+            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles ");
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
