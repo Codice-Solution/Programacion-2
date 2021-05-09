@@ -26,7 +26,7 @@ class Main{
                     bus_1.imprimir();
 
                 }
-                else if (menu == 2){
+                if (menu == 2){
                     camion_1.driver.imprimir_driver();
                     bus_1.driver.imprimir_driver();
 
