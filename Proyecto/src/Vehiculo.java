@@ -65,4 +65,8 @@ class Vehiculo { //Super Clase
     }
 
 
+    public void imprimir_diver(){
+        System.out.println("Nombre: " + driver.getNombre() + ", Rut: " + driver.getRut() + ", Edad: " + driver.getEdad());
+    }
+
 }

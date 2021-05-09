@@ -7,9 +7,13 @@ class Main{
         Scanner scanner = new Scanner(System.in);
 
         //Inicializando Objetos _________________________________________________________________________
+
+
         Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), "FWLS23", "Camion",2000, 3);
+
         Bus bus_1 = new Bus(new Conductor("1234234", "Jose Mancilla", 21), "AFHJ23", "Bus",1500, 2);
         //________________________________________________________________________________________________
+
 
         do {
             System.out.println("Ingrese 1 si quiere ver los datos de los Vehiculos disponibles: ");
@@ -19,7 +23,8 @@ class Main{
 
                 if (menu == 1) { // condicion if para generar el menu
                     camion_1.imprimir(); //llamando a la funcion imprimir definida en Vehiculo
-                    // bus_1.imprimir();
+
+
                 }
                 else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo
                     System.out.println("Valor no valido"); //imprime una alerta
