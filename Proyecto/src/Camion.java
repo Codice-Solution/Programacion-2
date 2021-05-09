@@ -32,4 +32,10 @@ public class Camion extends Vehiculo{
     public void imprimir() {
         super.imprimir();
     }
+
+    @Override
+    public void imprimir_diver() {
+       // driver.setNombre("Carlos");
+        super.imprimir_diver();
+    }
 }
