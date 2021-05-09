@@ -24,7 +24,7 @@ public class Camion extends Vehiculo{
     }
 
     public void imprimir(){
-        System.out.println("Nombre del conductor: " + driver.getNombre() + ", Rut: "+ driver.getRut() + ", Edad: " + driver.getEdad() +
+        System.out.println("Tipo: Camion, "+"Nombre del conductor: " + driver.getNombre() + ", Rut: "+ driver.getRut() + ", Edad: " + driver.getEdad() +
                 ", Patente del vehiculo: " + getPatente() + ", Masa: " + getMasa() + ", Altura: " + getAltura());
     }
 
