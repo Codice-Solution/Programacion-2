@@ -1,5 +1,3 @@
-import java.sql.SQLOutput;
-
 
 public class Gps {//Super Clase
     private int id; // Identificador unico del GPS que se asociará a la patente

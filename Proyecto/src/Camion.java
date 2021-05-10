@@ -1,8 +1,6 @@
 public class Camion extends Vehiculo{
     private int capacidad_de_carga;
 
-
-
     public Camion(Conductor driver, Gps gps,String patente, int velocidad,String tipo,int masa, int altura){
         super(driver, gps ,patente, velocidad,tipo ,masa, altura);
 
