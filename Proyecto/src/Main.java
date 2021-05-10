@@ -1,6 +1,6 @@
 import java.util.Scanner;
 import java.util.Random;
-class Main{
+public class Main{
     public static void main(String[] args) {
         boolean continua ; //Condicion del ciclo while
 
@@ -8,8 +8,8 @@ class Main{
 
         //Inicializando Objetos _________________________________________________________________________
 
-        int a = (int)(Math.random()*70+20);
-        int b = (int)(Math.random()*70+20);
+        int a = 1;
+        int b = 1;
 
         Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), new Gps(0, "Mazda"),"FWLS23", a ,"Camion",2000, 3);
 
@@ -24,11 +24,9 @@ class Main{
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
 
                 if (menu == 1) { // condicion if para generar el menu
-                    camion_1.imprimir(); //llamando a la funcion imprimir definida en Vehiculo
-                    bus_1.imprimir();
-                    bus_1.gps.calculo_velocidad(3 , 4);
+                    camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
 
-
+                    bus_1.Imprimir_datos();
 
                 }
                 else if (menu == 2){

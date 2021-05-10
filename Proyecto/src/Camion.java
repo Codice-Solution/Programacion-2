@@ -25,21 +25,15 @@ public class Camion extends Vehiculo{
         this.gps = gps;
     }
 
-    //public void imprimir(){
-      //  System.out.println("patente: "+ this.getPatente() + "Masa: " + this.getMasa() + "Altura: " + getAltura());
-    //}
-
-
-
-    @Override
-    public void imprimir() {
-
-        int a = getVelocidad(); // declaramos una variable obtenemos la velociad del camion
-         a= gps.calculo_velocidad(getVelocidad() , 2); // llamamos a la funcion con los parametros que requiere en este caso dos int.
-        this.setVelocidad(a); // cambiamos la velocidad por la que retorno el metodo anterior
-        super.imprimir(); // funcion imprimir declarada en la superclase Vehiculo.
-
+    public void imprimir_datos(){
+        int a=gps.test();
+        setVelocidad(a);
+        super.imprimir();
 
     }
+
+
+
+
 
 }

@@ -1,12 +1,13 @@
 import java.sql.SQLOutput;
 
-class Gps {//Super Clase
+
+public class Gps {//Super Clase
     private int id; // Identificador unico del GPS que se asociará a la patente
     private boolean señal; //prendido o apagado dependiendo del tiempo.
     private String posicion; //Posición del vehiculo actualmente.
     private String marca; // Marcar del dispositivo.
-    private Vehiculo hola;
-    private Camion bus;
+    private Carretera test;
+    private Bus g;
 
     public Gps(int id, String marca){
         this.id = id;
@@ -43,9 +44,13 @@ class Gps {//Super Clase
 
         return a; // retorna el resultado
 
-
-
-
     }
+
+    public int test(){
+
+        int a = test.distancia();
+        return a;
+    }
+
 
 }
