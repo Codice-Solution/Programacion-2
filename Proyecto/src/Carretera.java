@@ -4,4 +4,5 @@ class Carretera { //Superclase
     private boolean tunel; // si hay tunel o no hay tunel.
     private int altura_maxima; //altura maxima que permite la cerretara.
 
+
 }

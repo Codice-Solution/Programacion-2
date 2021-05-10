@@ -4,15 +4,27 @@ class Vehiculo { //Super Clase
     private int masa; //Masa actual del vehiculo.
     private int altura; //altura del vehiculo.
     protected Conductor driver;
+    protected Gps gps;
+    protected int velocidad;
 
 
-    public Vehiculo(Conductor driver, String patente, String tipo,int masa,int altura){
+    public Vehiculo(Conductor driver, Gps gps,String patente, int velocidad,String tipo,int masa,int altura){
         this.driver = driver;
+        this.gps = gps;
         this.patente = patente;
+        this.velocidad = velocidad;
         this.tipo = tipo;
         this.masa = masa;
         this.altura = altura;
 
+    }
+
+    public int getVelocidad() {
+        return velocidad;
+    }
+
+    public void setVelocidad(int velocidad) {
+        this.velocidad = velocidad;
     }
 
     public String getTipo() {
@@ -61,8 +73,9 @@ class Vehiculo { //Super Clase
       //  System.out.println("Tipo: Camion, "+ "Patente del vehiculo: " + getPatente() + ", Masa: " + getMasa() + ", Altura: " + getAltura());
     //}
     public void imprimir(){
-        System.out.println("Tipo: "+this.tipo+", patente: "+ this.getPatente() + ", Masa: " + this.getMasa() + ", Altura: " + getAltura());
+        System.out.println("Tipo: "+this.tipo+", patente: "+ this.getPatente() +", Velocidad: " + this.getVelocidad() +", Masa: " + this.getMasa() + ", Altura: " + getAltura());
     }
+
 
 
 
