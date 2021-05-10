@@ -1,5 +1,5 @@
 import java.util.Scanner;
-import java.util.Random;
+
 public class Main{
     public static void main(String[] args) {
         boolean continua ; //Condicion del ciclo while
@@ -52,9 +52,6 @@ public class Main{
 
             }
         }while (continua); // verifica si continua en false
-
-
-
 
     }
 
