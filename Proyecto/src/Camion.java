@@ -26,8 +26,6 @@ public class Camion extends Vehiculo{
     }
 
     public void imprimir_datos(){
-        int a=gps.test();
-        setVelocidad(a);
         super.imprimir();
     }
 

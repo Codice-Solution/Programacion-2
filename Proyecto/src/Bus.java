@@ -12,9 +12,6 @@ public class Bus extends Vehiculo {
     }
 
     public void Imprimir_datos(){
-
-        int a=gps.test();
-        setVelocidad(a);
         super.imprimir();
     }
 

@@ -21,7 +21,6 @@ public class Vehiculo { //Super Clase
     public Vehiculo(){
 
     }
-
     public int getVelocidad() {
         return velocidad;
     }
@@ -42,26 +41,21 @@ public class Vehiculo { //Super Clase
         return patente;
     }
 
-
     public void setPatente(String patente) {
         this.patente = patente;
     }
-
 
     public int getMasa() {
         return masa;
     }
 
-
     public void setMasa(int masa) {
         this.masa = masa;
     }
 
-
     public int getAltura() {
         return altura;
     }
-
 
     public void setAltura(int altura) {
         this.altura = altura;
