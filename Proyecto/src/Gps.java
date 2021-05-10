@@ -4,7 +4,6 @@ public class Gps {//Super Clase
     private boolean señal; //prendido o apagado dependiendo del tiempo.
     private String posicion; //Posición del vehiculo actualmente.
     private String marca; // Marcar del dispositivo.
-    private Carretera test;
     private Bus bus;
 
 
