@@ -33,8 +33,12 @@ public class Camion extends Vehiculo{
 
     @Override
     public void imprimir() {
-        super.imprimir();
-        this.gps.setId(6);
+
+        int a = getVelocidad(); // declaramos una variable obtenemos la velociad del camion
+         a= gps.calculo_velocidad(getVelocidad() , 2); // llamamos a la funcion con los parametros que requiere en este caso dos int.
+        this.setVelocidad(a); // cambiamos la velocidad por la que retorno el metodo anterior
+        super.imprimir(); // funcion imprimir declarada en la superclase Vehiculo.
+
 
     }
 

@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+import java.util.Random;
 class Main{
     public static void main(String[] args) {
         boolean continua ; //Condicion del ciclo while
@@ -8,10 +8,12 @@ class Main{
 
         //Inicializando Objetos _________________________________________________________________________
 
+        int a = (int)(Math.random()*70+20);
+        int b = (int)(Math.random()*70+20);
 
-        Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), new Gps(0, "Mazda"),"FWLS23", 0,"Camion",2000, 3);
+        Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), new Gps(0, "Mazda"),"FWLS23", a ,"Camion",2000, 3);
 
-        Bus bus_1 = new Bus(new Conductor("1234234", "Jose Mancilla", 21), new Gps(1,"BMW"),"AFHJ23", 0,"Bus",1500, 2);
+        Bus bus_1 = new Bus(new Conductor("1234234", "Jose Mancilla", 21), new Gps(1,"BMW"),"AFHJ23", b ,"Bus",1500, 2);
         //________________________________________________________________________________________________
 
 
@@ -23,14 +25,15 @@ class Main{
 
                 if (menu == 1) { // condicion if para generar el menu
                     camion_1.imprimir(); //llamando a la funcion imprimir definida en Vehiculo
-                    bus_1.setVelocidad(234);
                     bus_1.imprimir();
+                    bus_1.gps.calculo_velocidad(3 , 4);
+
+
 
                 }
                 else if (menu == 2){
                     camion_1.driver.imprimir_driver();
                     bus_1.driver.imprimir_driver();
-
 
                 }
                 else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo

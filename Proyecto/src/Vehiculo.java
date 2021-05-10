@@ -5,7 +5,7 @@ class Vehiculo { //Super Clase
     private int altura; //altura del vehiculo.
     protected Conductor driver;
     protected Gps gps;
-    protected int velocidad;
+    private int velocidad;
 
 
     public Vehiculo(Conductor driver, Gps gps,String patente, int velocidad,String tipo,int masa,int altura){

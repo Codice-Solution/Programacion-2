@@ -1,9 +1,12 @@
+import java.sql.SQLOutput;
+
 class Gps {//Super Clase
     private int id; // Identificador unico del GPS que se asociará a la patente
     private boolean señal; //prendido o apagado dependiendo del tiempo.
     private String posicion; //Posición del vehiculo actualmente.
     private String marca; // Marcar del dispositivo.
-
+    private Vehiculo hola;
+    private Camion bus;
 
     public Gps(int id, String marca){
         this.id = id;
@@ -35,7 +38,14 @@ class Gps {//Super Clase
         this.posicion = posicion;
     }
 
-    public void gos(){
+    public int calculo_velocidad(int a, int b){ //Metodo de ejemplo para calcular la velocidad
+        a = a * b; //parametros que recibe el metodo, en el caso del proyecto dos distancias distintan.
+
+        return a; // retorna el resultado
+
+
+
 
     }
+
 }
