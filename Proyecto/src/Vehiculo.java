@@ -74,7 +74,7 @@ public class Vehiculo { //Super Clase
 
     }
      public void imprimir_velocidad(){
-         System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente() + ", Velocidad: " + this.gps.test());
+         System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente() + ", Velocidad: " + this.gps.distancia());
      }
 
 

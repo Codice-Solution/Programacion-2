@@ -47,11 +47,20 @@ public class Gps {//Super Clase
 
     }
 
-    public int test(){
+  /*  public int test(){
 
         int a = test.distancia();
         return a;
-    }
+    }*/
+    public static int distancia(){
 
+        int x1 = (int)(Math.random()*10+30);
+        int x2 = (int)(Math.random()*31+50);
+        int y1 = (int)(Math.random()*51+70);
+        int y2 = (int)(Math.random()*71+100);
+        int a = (int)Math.sqrt((int)Math.pow(x2-x1, 2)+((int)Math.pow(y2-y1,2)));
+
+        return a;
+    }
 
 }
