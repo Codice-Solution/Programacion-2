@@ -5,13 +5,21 @@ public class Bus extends Vehiculo {
     public Bus(Conductor driver, Gps gps, String patente, int velocidad, String tipo, int masa, int altura) {
         super(driver, gps, patente, velocidad, tipo, masa, altura);
 
+    }
+
+    public Bus(){
 
     }
 
     public void Imprimir_datos(){
+
         int a=gps.test();
         setVelocidad(a);
         super.imprimir();
+    }
+
+    public void velo(){
+        super.imprimir_velocidad();
 
     }
 }

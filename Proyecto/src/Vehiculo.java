@@ -18,6 +18,9 @@ public class Vehiculo { //Super Clase
         this.altura = altura;
 
     }
+    public Vehiculo(){
+
+    }
 
     public int getVelocidad() {
         return velocidad;
@@ -73,9 +76,12 @@ public class Vehiculo { //Super Clase
       //  System.out.println("Tipo: Camion, "+ "Patente del vehiculo: " + getPatente() + ", Masa: " + getMasa() + ", Altura: " + getAltura());
     //}
     public void imprimir(){
-        System.out.println("Tipo: "+this.tipo+", patente: "+ this.getPatente() +", Velocidad: " + this.getVelocidad() +", Masa: " + this.getMasa() + ", Altura: " + getAltura());
-    }
+        System.out.println("Tipo: "+this.tipo+", patente: "+ this.getPatente() +", Masa: " + this.getMasa() + ", Altura: " + getAltura());
 
+    }
+     public void imprimir_velocidad(){
+         System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente() + ", Velocidad: " + this.gps.test());
+     }
 
 
 

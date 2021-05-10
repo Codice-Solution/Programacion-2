@@ -7,7 +7,8 @@ public class Gps {//Super Clase
     private String posicion; //Posición del vehiculo actualmente.
     private String marca; // Marcar del dispositivo.
     private Carretera test;
-    private Bus g;
+    private Bus bus;
+
 
     public Gps(int id, String marca){
         this.id = id;

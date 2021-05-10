@@ -18,14 +18,13 @@ public class Main{
 
 
         do {
-            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles ");
+            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles\n3 Si quiere ver la velocidad de cada camion ");
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
 
                 if (menu == 1) { // condicion if para generar el menu
                     camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
-
                     bus_1.Imprimir_datos();
 
                 }
@@ -34,6 +33,13 @@ public class Main{
                     bus_1.driver.imprimir_driver();
 
                 }
+                else if (menu == 3){
+                    bus_1.velo();
+                    camion_1.velo();
+
+
+                }
+
                 else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo
                     System.out.println("Valor no valido"); //imprime una alerta
                     continua = true; // continua es verdadera para que el ciclo no se corte y pregunte nuevamente el numero
@@ -46,6 +52,8 @@ public class Main{
 
             }
         }while (continua); // verifica si continua en false
+
+
 
 
     }

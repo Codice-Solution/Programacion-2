@@ -29,7 +29,11 @@ public class Camion extends Vehiculo{
         int a=gps.test();
         setVelocidad(a);
         super.imprimir();
+    }
 
+    public void velo(){
+
+        super.imprimir_velocidad();
     }
 
 
