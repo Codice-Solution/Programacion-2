@@ -12,12 +12,12 @@ class Eventos {
 
     public static boolean exceso(int vel_excedida) {
         int vel_max = 20;
-        boolean a;
+        boolean condicion;
         if (vel_excedida > vel_max) {
-            a = true;
+            condicion = true;
         }else{
-            a = false;
+            condicion = false;
         }
-        return a;
+        return condicion;
     }
     }

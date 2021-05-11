@@ -70,7 +70,7 @@ public class Vehiculo { //Super Clase
 
     }
      public void imprimir_velocidad(){ //funcion que imprime la velocidad de las clases hijas con la velocidad acual.
-         System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+" Km/h");
+         System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
 
          boolean b = this.maximo.exceso(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
          if (b==true){ //condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
