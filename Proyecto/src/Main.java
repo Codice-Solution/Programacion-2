@@ -19,7 +19,7 @@ public class Main{
 
 
         do {
-            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles\n3 Si quiere ver la velocidad de cada camion ");
+            System.out.println("Ingrese \n1 si quiere ver los datos de los Vehiculos disponibles\n2 si quiere ver los conductores disponibles\n3 Si quiere ver la velocidad de cada camion\n4 Si quiere cerrar el menu presione");
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
@@ -27,18 +27,22 @@ public class Main{
                 if (menu == 1) { // condicion if para generar el menu
                     camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
                     bus_1.Imprimir_datos();
-
+                    continua = true;
                 }
                 else if (menu == 2){
                     camion_1.driver.imprimir_driver();
                     bus_1.driver.imprimir_driver();
-
+                    continua = true;
                 }
                 else if (menu == 3){
                     bus_1.velocidad();
                     camion_1.velocidad();
+                    continua = true;
 
+                }
 
+                else if (menu == 4){
+                    continua = false;
                 }
 
                 else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo
