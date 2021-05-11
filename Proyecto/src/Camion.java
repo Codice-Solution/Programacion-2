@@ -1,11 +1,11 @@
 public class Camion extends Vehiculo{
     private int capacidad_de_carga;
+    private Vehiculo vehiculo;
 
-    public Camion(Conductor driver, Gps gps,String patente, int velocidad,String tipo,int masa, int altura){
-        super(driver, gps ,patente, velocidad,tipo ,masa, altura);
+    public Camion(Conductor driver, Gps gps,String patente, String tipo,int masa, int altura){ //Constructor de la clase padre vehiculo
+        super(driver, gps ,patente,tipo ,masa, altura);
 
     }
-
 
     public int getCapacidad_de_carga() {
         return capacidad_de_carga;
@@ -23,13 +23,15 @@ public class Camion extends Vehiculo{
         this.gps = gps;
     }
 
-    public void imprimir_datos(){
+
+    public void imprimir_datos(){ // funcion que llama a la funcion de la clase padre para imprimir los datos del bus
         super.imprimir();
     }
 
-    public void velo(){
-
-        super.imprimir_velocidad();
+    public void velocidad(){// funcion que determina la velocidad del camion.
+        int a = this.gps.distancia();//a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
+        setVelocidad(a);// cambiamos el valor de velocidad.
+        super.imprimir_velocidad();// funcion ubicada en la clase padre que imprime la velocidad actual del camion
     }
 
 

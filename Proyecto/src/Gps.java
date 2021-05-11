@@ -37,27 +37,16 @@ public class Gps {//Super Clase
         this.posicion = posicion;
     }
 
-    public int calculo_velocidad(int a, int b){ //Metodo de ejemplo para calcular la velocidad
-        a = a * b; //parametros que recibe el metodo, en el caso del proyecto dos distancias distintan.
+    public static int distancia(){ //funcion que calcula la distancia entro dos puntos, la cual determina la velocidad del vehiculo
 
-        return a; // retorna el resultado
-
-    }
-
-  /*  public int test(){
-
-        int a = test.distancia();
-        return a;
-    }*/
-    public static int distancia(){
-
-        int x1 = (int)(Math.random()*10+30);
-        int x2 = (int)(Math.random()*31+50);
-        int y1 = (int)(Math.random()*51+70);
-        int y2 = (int)(Math.random()*71+100);
+        int x1 = (int)(Math.random()*10+30); //punto en el eje cartesiano
+        int x2 = (int)(Math.random()*31+50);//punto en el eje cartesiano
+        int y1 = (int)(Math.random()*51+70);//punto en el eje cartesiano
+        int y2 = (int)(Math.random()*71+100);//punto en el eje cartesiano
         int a = (int)Math.sqrt((int)Math.pow(x2-x1, 2)+((int)Math.pow(y2-y1,2)));
 
         return a;
     }
+
 
 }

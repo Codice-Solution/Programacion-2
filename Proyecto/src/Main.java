@@ -1,4 +1,5 @@
 import java.util.Scanner;
+// Link repositorio Github https://github.com/Codice-Solution/Test.git
 
 public class Main{
     public static void main(String[] args) {
@@ -11,9 +12,9 @@ public class Main{
         int a = 1;
         int b = 1;
 
-        Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), new Gps(0, "Mazda"),"FWLS23", a ,"Camion",2000, 3);
+        Camion camion_1 = new Camion(new Conductor("1234", "Miguel Maturana", 25), new Gps(0, "Mazda"),"FWLS23" ,"Camion",2000, 3);
 
-        Bus bus_1 = new Bus(new Conductor("1234234", "Jose Mancilla", 21), new Gps(1,"BMW"),"AFHJ23", b ,"Bus",1500, 2);
+        Bus bus_1 = new Bus(new Conductor("1234234", "Jose Mancilla", 21), new Gps(1,"BMW"),"AFHJ23" ,"Bus",1500, 2);
         //________________________________________________________________________________________________
 
 
@@ -34,8 +35,8 @@ public class Main{
 
                 }
                 else if (menu == 3){
-                    bus_1.velo();
-                    camion_1.velo();
+                    bus_1.velocidad();
+                    camion_1.velocidad();
 
 
                 }
