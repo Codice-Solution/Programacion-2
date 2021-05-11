@@ -1,3 +1,8 @@
+// Link repositorio Github https://github.com/Codice-Solution/Test.git
+
+// Autores
+// Jose Mancilla Marambio ; 20.476.565-0 ; jose.mancilla@alumnos.uv.cl
+// Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.un.cl
 
 public class Gps {//Super Clase
     private int id; // Identificador unico del GPS que se asociará a la patente
@@ -43,7 +48,7 @@ public class Gps {//Super Clase
         int x2 = (int)(Math.random()*31+50);//punto en el eje cartesiano
         int y1 = (int)(Math.random()*51+70);//punto en el eje cartesiano
         int y2 = (int)(Math.random()*71+100);//punto en el eje cartesiano
-        int a = (int)Math.sqrt((int)Math.pow(x2-x1, 2)+((int)Math.pow(y2-y1,2)));
+        int a = (int)Math.sqrt((int)Math.pow(x2-x1, 2)+((int)Math.pow(y2-y1,2)));//Calculo de la distancia segun los puntos cartesianos generados
 
         return a;
     }
