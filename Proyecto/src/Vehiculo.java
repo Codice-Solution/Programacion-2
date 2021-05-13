@@ -6,7 +6,7 @@ public class Vehiculo { //Super Clase
     protected Conductor driver;
     protected Gps gps;
     private int velocidad;
-    private Eventos maximo;
+    private Exceso_velocidad maximo;
     private Bus bus;
 
 
