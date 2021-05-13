@@ -19,6 +19,14 @@ public class Main{
         Bus bus_1 = new Bus(new Conductor("20.476.565-0", "Jose Mancilla", 21), new Gps(1,"BMW"),"AFHJ23" ,"Bus",1500, 2);
         //________________________________________________________________________________________________
 
+        bus_1.driver.imprimir_driver();
+        camion_1.driver.imprimir_driver();
+
+        bus_1.imprimir();
+        camion_1.imprimir();
+
+
+
 
     }
 
