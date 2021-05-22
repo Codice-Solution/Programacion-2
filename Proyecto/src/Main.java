@@ -24,33 +24,30 @@ public class Main{
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
-
-                if (menu == 1) { // condicion if para generar el menu
-                    camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
-                    bus_1.Imprimir_datos();
+                switch (menu){
+                    case 1:
+                        camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
+                        bus_1.Imprimir_datos();
+                        continua = true;
+                        break;
+                    case 2:
+                        camion_1.driver.imprimir_driver();
+                        bus_1.driver.imprimir_driver();
+                        continua = true;
+                        break;
+                    case 3:
+                        bus_1.velocidad();
+                        camion_1.velocidad();
+                        continua = true;
+                        break;
+                    case 4:
+                        continua = false;
+                        break;
+                }
+                if (menu != (1 ^ 2 ^ 3 ^ 4)){
+                    System.out.println("Valor no valido");
                     continua = true;
                 }
-                else if (menu == 2){
-                    camion_1.driver.imprimir_driver();
-                    bus_1.driver.imprimir_driver();
-                    continua = true;
-                }
-                else if (menu == 3){
-                    bus_1.velocidad();
-                    camion_1.velocidad();
-                    continua = true;
-
-                }
-
-                else if (menu == 4){
-                    continua = false;
-                }
-
-                else { //si el ingresa un numero pero no el requerido entra a este bloque de codigo
-                    System.out.println("Valor no valido"); //imprime una alerta
-                    continua = true; // continua es verdadera para que el ciclo no se corte y pregunte nuevamente el numero
-                }
-
             } catch (java.util.InputMismatchException e) { //bloque de codigo por si algo falla en try
                 System.out.println("Valor no valido, intentelo de nuevo"); //imprime una alerta
                 scanner.next();
