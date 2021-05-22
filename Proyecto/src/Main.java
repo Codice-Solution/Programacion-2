@@ -43,11 +43,11 @@ public class Main{
                     case 4:
                         continua = false;
                         break;
+                    default: // funcion por si el usuario ingresa una opcion incorrecta, se imprime que no es valido y continua el ciclo
+                        System.out.println("Valor no valido");
+                        continua = true;
                 }
-                if (menu != (1 ^ 2 ^ 3 ^ 4)){
-                    System.out.println("Valor no valido");
-                    continua = true;
-                }
+
             } catch (java.util.InputMismatchException e) { //bloque de codigo por si algo falla en try
                 System.out.println("Valor no valido, intentelo de nuevo"); //imprime una alerta
                 scanner.next();
