@@ -4,6 +4,11 @@
 // Jose Mancilla Marambio ; 20.476.565-0 ; jose.mancilla@alumnos.uv.cl
 // Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.un.cl
 
+/**
+ * Clase extendida de vehiculo
+ * @see Vehiculo
+ * @author Codice Solution.
+ */
 public class Camion extends Vehiculo{
     private int capacidad_de_carga;
     private Vehiculo vehiculo;

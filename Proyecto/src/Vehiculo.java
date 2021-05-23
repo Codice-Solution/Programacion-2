@@ -1,6 +1,19 @@
+/**
+ * Esta clase es la superclase para definir varios tipos de Vehiculos
+ * @author Codice Solution
+ */
 public class Vehiculo { //Super Clase
+    /**
+     * Patente de cada vehiculo
+     */
     private String patente; //Identificador de cada vehiculo.
+    /**
+     * Tipo de vehiculo
+     */
     private String tipo;
+    /**
+     * masa del Vehiculo
+     */
     private int masa; //Masa actual del vehiculo.
     private int altura; //altura del vehiculo.
     protected Conductor driver;

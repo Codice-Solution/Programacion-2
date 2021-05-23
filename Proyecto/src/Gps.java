@@ -6,7 +6,7 @@
 
 public class Gps {//Super Clase
     private int id; // Identificador unico del GPS que se asociará a la patente
-    private boolean señal; //prendido o apagado dependiendo del tiempo.
+    private boolean senal; //prendido o apagado dependiendo del tiempo.
     private String posicion; //Posición del vehiculo actualmente.
     private String marca; // Marcar del dispositivo.
     private Bus bus;
@@ -25,12 +25,12 @@ public class Gps {//Super Clase
         this.id = id;
     }
 
-    public boolean isSeñal() {
-        return señal;
+    public boolean isSenal() {
+        return senal;
     }
 
-    public void setSeñal(boolean señal) {
-        this.señal = señal;
+    public void setSenal(boolean senal) {
+        this.senal = senal;
     }
 
 
