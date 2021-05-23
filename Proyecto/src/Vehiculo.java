@@ -65,10 +65,17 @@ public class Vehiculo { //Super Clase
         return driver;
     }
 
+    /**
+     * Este metodo imprime los datos del vehiculo.
+     */
     public void imprimir(){ //Funcion que imprime los datos de las clases hijas obteniendo sus valores.
         System.out.println("Tipo: "+this.tipo+", patente: "+ this.getPatente() +", Masa: " + this.getMasa() + ", Altura: " + getAltura());
 
     }
+
+    /**
+     * Metodo que imprime la velocidad del vehiculo
+     */
      public void imprimir_velocidad(){ //funcion que imprime la velocidad de las clases hijas con la velocidad acual.
          System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
 

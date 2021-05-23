@@ -12,10 +12,19 @@ public class Bus extends Vehiculo {
 
     }
 
+    /**
+     * Metodo que imprime los datos del Vehiculo desde el metodo ubicado en la clase padre {@link Vehiculo#imprimir()}
+     * @see Vehiculo#imprimir()
+     */
+
     public void Imprimir_datos(){ // funcion que llama a la funcion de la clase padre para imprimir los datos del bus
+
         super.imprimir();
     }
 
+    /**
+     * Metodo que imprime la velocidad del Vehiculo desde el metodo ubicado en la clase padre {@linkplain Vehiculo#imprimir_velocidad()}
+     */
     public void velocidad(){ // funcion que determina la velocidad del bus.
         int a = this.gps.distancia(); //a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a); // cambiamos el valor de velocidad.

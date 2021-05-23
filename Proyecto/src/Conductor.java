@@ -39,6 +39,11 @@ public class Conductor {
         this.edad = edad;
     }
 
+    /**
+     * Metodo que imprime los datos del concuctor.
+     *
+     */
+
     public void imprimir_driver(){
         System.out.println("Nombre: "+ this.getNombre() + ", Rut: " + this.getRut() + ", Edad: " + this.getEdad());
     }
