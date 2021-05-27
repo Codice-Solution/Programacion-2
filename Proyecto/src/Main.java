@@ -8,7 +8,7 @@ import java.util.Scanner;
 
 public class Main{
     public static void main(String[] args) {
-        boolean continua ; //Condicion del ciclo while
+        boolean continua ; //Condicion del ciclo do while
 
         Scanner scanner = new Scanner(System.in);
 
