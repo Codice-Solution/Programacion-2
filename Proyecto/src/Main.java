@@ -32,8 +32,8 @@ public class Main{
                         continua = true;
                         break;
                     case 2:
-                        camion_1.driver.imprimir_driver();
-                        bus_1.driver.imprimir_driver();
+                        System.out.println(bus_1.driver);
+                        System.out.println(camion_1.driver);
                         continua = true;
                         break;
                     case 3:

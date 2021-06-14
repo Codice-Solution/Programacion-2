@@ -2,7 +2,7 @@
  * Esta clase es la superclase para definir varios tipos de Vehiculos
  * @author Codice Solution
  */
-public class Vehiculo { //Super Clase
+public abstract class Vehiculo { //Super Clase
     /**
      * Patente de cada vehiculo
      */

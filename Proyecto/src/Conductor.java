@@ -48,4 +48,10 @@ public class Conductor {
         System.out.println("Nombre: "+ this.getNombre() + ", Rut: " + this.getRut() + ", Edad: " + this.getEdad());
     }
 
+    @Override
+    public String toString() {
+        return  "Nombre: " + nombre+"\n"+
+                "Rut: " + rut +"\n"+
+                "Edad: " + edad + "\n";
+    }
 }
