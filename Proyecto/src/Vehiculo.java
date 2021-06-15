@@ -33,6 +33,10 @@ public abstract class Vehiculo { //Super Clase
         this.altura = altura;
 
     }
+
+    protected Vehiculo() {
+    }
+
     public int getVelocidad() {
         return velocidad;
     }
@@ -76,6 +80,10 @@ public abstract class Vehiculo { //Super Clase
 
     public Conductor getDriver() {
         return driver;
+    }
+
+    public Gps getGps() {
+        return gps;
     }
 
     /**

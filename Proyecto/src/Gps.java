@@ -53,5 +53,9 @@ public class Gps {//Super Clase
         return a;
     }
 
-
+    @Override
+    public String toString() {
+        return  "id:  " + id +"\n"+
+                "marca: " + marca + "\n";
+    }
 }

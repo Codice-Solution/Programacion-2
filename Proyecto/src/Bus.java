@@ -3,17 +3,25 @@
 // Autores
 // Jose Mancilla Marambio ; 20.476.565-0 ; jose.mancilla@alumnos.uv.cl
 // Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.un.cl
+
+import java.util.ArrayList;
+
 /**
  * Clase extendida de vehiculo
  * @see Vehiculo
  * @author Codice Solution.
  */
 public class Bus extends Vehiculo {
+    private ArrayList<Bus> buses = new ArrayList<>();
     private int cantidad_pasajeros;
 
     public Bus(Conductor driver, Gps gps, String patente, String tipo, int masa, int altura) {//Constructor de la clase padre vehiculo
         super(driver, gps, patente,tipo, masa, altura);
 
+    }
+
+    public Bus(ArrayList<Bus> buses) {
+        this.buses = buses;
     }
 
     /**
@@ -33,5 +41,12 @@ public class Bus extends Vehiculo {
         int a = this.gps.distancia(); //a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a); // cambiamos el valor de velocidad.
         super.imprimir_velocidad(); // funcion ubicada en la clase padre que imprime la velocidad actual del bus
+    }
+
+    public void imprimirLista() {
+        for (Bus a: buses) {
+            System.out.println(a.getDriver() +" "+ a.getGps());
+
+        }
     }
 }
