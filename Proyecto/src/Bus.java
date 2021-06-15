@@ -29,7 +29,7 @@ public class Bus extends Vehiculo {
     /**
      * Metodo que imprime la velocidad del Vehiculo desde el metodo ubicado en la clase padre {@linkplain Vehiculo#imprimir_velocidad()}
      */
-    public void velocidad(){ // funcion que determina la velocidad del bus.
+    public void velocidad() throws InterruptedException { // funcion que determina la velocidad del bus.
         int a = this.gps.distancia(); //a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a); // cambiamos el valor de velocidad.
         super.imprimir_velocidad(); // funcion ubicada en la clase padre que imprime la velocidad actual del bus

@@ -4,6 +4,7 @@
 // Jose Mancilla Marambio ; 20.476.565-0 ; jose.mancilla@alumnos.uv.cl
 // Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.uv.cl
 
+import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main{
@@ -37,8 +38,10 @@ public class Main{
                         continua = true;
                         break;
                     case 3:
-                        bus_1.velocidad();
-                        camion_1.velocidad();
+                        for (int i = 0; i < 10; i++) {
+                            bus_1.velocidad();
+                            camion_1.velocidad();
+                        }
                         continua = true;
                         break;
                     case 4:
@@ -49,7 +52,7 @@ public class Main{
                         continua = true;
                 }
 
-            } catch (java.util.InputMismatchException e) { //bloque de codigo por si algo falla en try
+            } catch (InputMismatchException | InterruptedException e) { //bloque de codigo por si algo falla en try
                 System.out.println("Valor no valido, intentelo de nuevo"); //imprime una alerta
                 scanner.next();
                 continua = true; //continua queda verdadero para que el que el ciclo no se corte
