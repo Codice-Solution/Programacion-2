@@ -22,7 +22,7 @@ public class Main{
         //________________________________________________________________________________________________
 
         do {
-            System.out.println("\nIngrese: \n[1] si quiere ver los datos de los Vehiculos disponibles.\n[2] si quiere ver los conductores disponibles.\n[3] Si quiere ver la velocidad de cada camion.\n[4] Si quiere cerrar el menu.");
+            System.out.println("\nIngrese: \n[1] si quiere ver los datos de los Vehiculos disponibles.\n[2] si quiere ver los conductores disponibles.\n[3] Si quiere ver la velocidad de cada vehiculo.\n[4] Si quiere cerrar el menu.");
             try { //bloque de codigo por si el usurio se equivoca no genera error en la pantalla
                 continua = false; //Si continua es falso se detiene el ciclo while
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
@@ -38,12 +38,42 @@ public class Main{
                         continua = true;
                         break;
                     case 3:
-                        for (int i = 0; i < 10; i++) {
-                            bus_1.velocidad();
-                            camion_1.velocidad();
-                        }
-                        continua = true;
-                        break;
+                        boolean condicion = true;
+                        do {
+                            try {
+                                System.out.println("Ingrese \n1 si quiere ver la velocidad de los buses \n2 si quiere ver la velocidad de los camiones \n0 para salir");
+                                int respuesta = scanner.nextInt();
+                                switch (respuesta) {
+                                    case 1:
+                                        for (int i = 0; i < 10; i++) {
+                                            bus_1.velocidad();
+                                        }
+                                            condicion = true;
+                                            break;
+
+                                    case 2:
+                                        for (int i = 0; i < 10; i++) {
+                                            camion_1.velocidad();
+                                        }
+                                            condicion=true;
+                                            break;
+
+                                    case 0:
+                                        condicion = false;
+                                        break;
+                                    default:
+                                        System.out.println("ingrese undigito correcto");
+                                        condicion=true;
+
+                                }
+                            }catch (InputMismatchException | InterruptedException e){
+                                System.out.println("digito incorrecto");
+                                scanner.next();
+                                condicion = true;
+                            }
+
+                        }while (condicion);
+
                     case 4:
                         continua = false;
                         break;
@@ -52,7 +82,7 @@ public class Main{
                         continua = true;
                 }
 
-            } catch (InputMismatchException | InterruptedException e) { //bloque de codigo por si algo falla en try
+            } catch (InputMismatchException e) { //bloque de codigo por si algo falla en try
                 System.out.println("Valor no valido, intentelo de nuevo"); //imprime una alerta
                 scanner.next();
                 continua = true; //continua queda verdadero para que el que el ciclo no se corte

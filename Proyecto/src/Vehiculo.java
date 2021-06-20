@@ -1,3 +1,8 @@
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+
 /**
  * Esta clase es la superclase para definir varios tipos de Vehiculos
  * @author Codice Solution
@@ -96,7 +101,21 @@ public abstract class Vehiculo { //Super Clase
          boolean b = this.maximo.exceso(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
          if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
              System.out.println("SPEED_MAX_EXCEEDED");
+             try(FileWriter fw = new FileWriter("reporte.txt");
+                 BufferedWriter bw = new BufferedWriter(fw);
+                 PrintWriter out = new PrintWriter(bw))
+
+             {
+               out.println("El Conductor: "+getDriver().getNombre()+ " En el vehiculo: " + getTipo() + " Patente: " + getPatente() +
+                       " tuvo un exceso de velocidad "+ "La velocidad fue: " + getVelocidad() +"\n");
+
+             } catch (IOException e) {
+
+             }
          }
+
+
+
 
 
      }

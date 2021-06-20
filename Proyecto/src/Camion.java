@@ -12,6 +12,7 @@
 public class Camion extends Vehiculo{
     private int capacidad_de_carga;
     private Vehiculo vehiculo;
+    private Eventos maximo;
 
     public Camion(Conductor driver, Gps gps,String patente, String tipo,int masa, int altura){ //Constructor de la clase padre vehiculo
         super(driver, gps ,patente,tipo ,masa, altura);
@@ -48,6 +49,18 @@ public class Camion extends Vehiculo{
         int a = this.gps.distancia();//a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a);// cambiamos el valor de velocidad.
         super.imprimir_velocidad();// funcion ubicada en la clase padre que imprime la velocidad actual del camion
+    }
+
+    public void imprimirVelocidad() throws InterruptedException {
+        System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
+        Thread.sleep(1000);
+
+        boolean b = this.maximo.exceso(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
+        if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
+            System.out.println("SPEED_MAX_EXCEEDED");
+        }
+
+
     }
 
 

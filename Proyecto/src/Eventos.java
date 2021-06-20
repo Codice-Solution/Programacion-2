@@ -11,7 +11,7 @@ class Eventos {
     }
 
     public static boolean exceso(int vel_excedida) {
-        int vel_max = 90;
+        int vel_max = 50;
         boolean condicion;
         if (vel_excedida > vel_max) {
             condicion = true;
