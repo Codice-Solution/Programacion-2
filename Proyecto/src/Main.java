@@ -31,8 +31,8 @@ public class Main{
                 int menu = scanner.nextInt(); //creando leyendo el objeto que lee la entrada por teclado.
                 switch (menu){
                     case 1:
-                        camion_1.imprimir_datos(); //llamando a la funcion imprimir definida en camion.
-                        bus_1.Imprimir_datos();
+                        camion_1.ImprimirDatos(); //llamando a la funcion imprimir definida en camion.
+                        bus_1.ImprimirDatos();
                         continua = true;
                         break;
                     case 2:
@@ -41,7 +41,7 @@ public class Main{
                         continua = true;
                         break;
                     case 3:
-                        boolean condicion = true;
+                        boolean condicion;
                         do {
                             try {
                                 System.out.println("Ingrese \n1 si quiere ver la velocidad de los buses \n2 si quiere ver la velocidad de los camiones \n0 para salir");
@@ -64,6 +64,8 @@ public class Main{
                                     case 0:
                                         condicion = false;
                                         break;
+
+
                                     default:
                                         System.out.println("ingrese undigito correcto");
                                         condicion=true;
@@ -76,6 +78,8 @@ public class Main{
                             }
 
                         }while (condicion);
+                        continua = true;
+                        break;
 
                     case 4:
                         continua = false;

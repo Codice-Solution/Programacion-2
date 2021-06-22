@@ -9,7 +9,7 @@
  * @see Vehiculo
  * @author Codice Solution.
  */
-public class Camion extends Vehiculo{
+public class Camion extends Vehiculo implements ImprimirDatos{
     private int capacidad_de_carga;
     private Vehiculo vehiculo;
     private Eventos maximo;
@@ -39,29 +39,26 @@ public class Camion extends Vehiculo{
      * Metodo que imprime los datos del Vehiculo desde el metodo ubicado en la clase padre {@linkplain Vehiculo#imprimir()}
      *
      */
-    public void imprimir_datos(){ // funcion que llama a la funcion de la clase padre para imprimir los datos del bus
+
+
+    @Override
+    public void ImprimirDatos(){// funcion que llama a la funcion de la clase padre para imprimir los datos del bus
         super.imprimir();
     }
+
+
     /**
      * Metodo que imprime la velocidad del Vehiculo desde el metodo ubicado en la clase padre {@linkplain Vehiculo#imprimir_velocidad()}
      */
+
+    @Override
     public void velocidad() throws InterruptedException {// funcion que determina la velocidad del camion.
         int a = this.gps.distancia();//a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a);// cambiamos el valor de velocidad.
         super.imprimir_velocidad();// funcion ubicada en la clase padre que imprime la velocidad actual del camion
     }
 
-    public void imprimirVelocidad() throws InterruptedException {
-        System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
-        Thread.sleep(1000);
 
-        boolean b = this.maximo.exceso(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
-        if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
-            System.out.println("SPEED_MAX_EXCEEDED");
-        }
-
-
-    }
 
 
 

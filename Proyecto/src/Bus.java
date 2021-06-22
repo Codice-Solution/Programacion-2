@@ -8,7 +8,7 @@
  * @see Vehiculo
  * @author Codice Solution.
  */
-public class Bus extends Vehiculo {
+public class Bus extends Vehiculo implements ImprimirDatos{
     private int cantidad_pasajeros;
 
     public Bus(Conductor driver, Gps gps, String patente, String tipo, int masa, int altura) {//Constructor de la clase padre vehiculo
@@ -21,17 +21,19 @@ public class Bus extends Vehiculo {
      * @see Vehiculo#imprimir()
      */
 
-    public void Imprimir_datos(){ // funcion que llama a la funcion de la clase padre para imprimir los datos del bus
-
+    @Override
+    public void ImprimirDatos(){
         super.imprimir();
     }
-
     /**
      * Metodo que imprime la velocidad del Vehiculo desde el metodo ubicado en la clase padre {@linkplain Vehiculo#imprimir_velocidad()}
      */
-    public void velocidad() throws InterruptedException { // funcion que determina la velocidad del bus.
+
+    @Override
+    public void velocidad() throws InterruptedException {
         int a = this.gps.distancia(); //a es una variable a la cual se le asigna un valor random obtenido de la funcion ubicada en la clase gps
         setVelocidad(a); // cambiamos el valor de velocidad.
         super.imprimir_velocidad(); // funcion ubicada en la clase padre que imprime la velocidad actual del bus
+
     }
 }
