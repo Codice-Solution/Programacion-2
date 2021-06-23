@@ -25,7 +25,7 @@ public abstract class Vehiculo { //Super Clase
     protected Conductor driver;
     protected Gps gps;
     private int velocidad;
-    private Eventos maximo;
+    private ExcesoVelocidad exceso;
     private Bus bus;
     private ArrayList<String> lista = new ArrayList();
 
@@ -101,7 +101,7 @@ public abstract class Vehiculo { //Super Clase
          System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
          Thread.sleep(1000);
 
-         boolean b = this.maximo.exceso(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
+         boolean b = this.exceso.excesoVelocidad(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
          if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
              System.out.println("SPEED_MAX_EXCEEDED");
 
