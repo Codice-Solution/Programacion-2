@@ -6,7 +6,7 @@
 
 public class Conductor {
     private String rut;
-    private String nombre;
+    protected String nombre;
     private int edad;
 
     public Conductor(String rut, String nombre, int edad){

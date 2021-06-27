@@ -4,11 +4,14 @@
 // Jose Mancilla Marambio ; 20.476.565-0 ; jose.mancilla@alumnos.uv.cl
 // Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.uv.cl
 
+
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main{
+
     public static void main(String[] args) {
         boolean continua ; //Condicion del ciclo do while
 
@@ -71,7 +74,7 @@ public class Main{
                                         condicion=true;
 
                                 }
-                            }catch (InputMismatchException | InterruptedException e){
+                            }catch (InputMismatchException | InterruptedException | IOException e){
                                 System.out.println("digito incorrecto");
                                 scanner.next();
                                 condicion = true;

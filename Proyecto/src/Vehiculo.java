@@ -3,6 +3,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Esta clase es la superclase para definir varios tipos de Vehiculos
@@ -12,7 +13,7 @@ public abstract class Vehiculo { //Super Clase
     /**
      * Patente de cada vehiculo
      */
-    private String patente; //Identificador de cada vehiculo.
+    protected String patente; //Identificador de cada vehiculo.
     /**
      * Tipo de vehiculo
      */
@@ -26,9 +27,6 @@ public abstract class Vehiculo { //Super Clase
     protected Gps gps;
     private int velocidad;
     private ExcesoVelocidad exceso;
-    private Bus bus;
-    private ArrayList<String> lista = new ArrayList();
-
 
 
     public Vehiculo(Conductor driver, Gps gps,String patente, String tipo,int masa,int altura){
@@ -97,13 +95,14 @@ public abstract class Vehiculo { //Super Clase
     /**
      * Metodo que imprime la velocidad del vehiculo
      */
-     public void imprimir_velocidad() throws InterruptedException { //funcion que imprime la velocidad de las clases hijas con la velocidad acual.
+     public void imprimir_velocidad() throws InterruptedException, IOException { //funcion que imprime la velocidad de las clases hijas con la velocidad acual.
          System.out.println("Tipo: " + getTipo()+ ", Patente: "+ getPatente()+", Velocidad: "+this.getVelocidad()+"  Km/h");
          Thread.sleep(1000);
 
          boolean b = this.exceso.excesoVelocidad(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
          if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
              System.out.println("SPEED_MAX_EXCEEDED");
+
 
          }
 

@@ -1,5 +1,6 @@
 public class ExcesoVelocidad extends Eventos {
 public ExcesoVelocidad(){
+    super();
 
 }
 
