@@ -1,9 +1,6 @@
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+
 import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
+
 
 /**
  * Esta clase es la superclase para definir varios tipos de Vehiculos
@@ -100,8 +97,10 @@ public abstract class Vehiculo { //Super Clase
          Thread.sleep(1000);
 
          boolean b = this.exceso.excesoVelocidad(this.getVelocidad()); //llamamos a la funcion exeso ubicada en la Clase Eventos la cual determina si hubo exceso de velocidad
-         if (b==true){//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
-             System.out.println("SPEED_MAX_EXCEEDED");
+         if (getVelocidad()==0) { // si la velocidad es 0 es por que hubo una perdida de señal de parte del gps.
+             System.out.println("SEÑAL PERDIDA\n");
+         } else if (b==true) {//condicion if que imprime SPEED_MAX_EXCEEDED si es que la funcion exceso retorna un 1 lo que significa que hubo exceso de velocidad
+             System.out.println("VELOCIDAD EXCEDIDA\n");
 
 
          }

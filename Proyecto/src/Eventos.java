@@ -10,8 +10,7 @@ import java.util.ArrayList;
 class Eventos {
 
 
-    public Eventos() {
-
+    public Eventos(){
     }
 
 

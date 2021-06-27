@@ -5,7 +5,6 @@
 // Miguel Maturana Figueroa ; 18.999.258-0 ; miguel.maturanaf@alumnos.un.cl
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 /**
  * Clase extendida de vehiculo
